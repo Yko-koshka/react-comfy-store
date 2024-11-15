@@ -41,9 +41,9 @@ const Filters = () => {
       {/* SHIPPING */}
       <FormCheckbox name="shipping" label="free shipping" size="checkbox-sm" />
       {/* BUTTONS */}
-      <buttons type="submit" className="btn btn-primary btn-sm">
+      <button type="submit" className="btn btn-primary btn-sm">
         search
-      </buttons>
+      </button>
       <Link to="/products" className="btn btn-accent btn-sm">
         reset
       </Link>
