@@ -28,7 +28,7 @@ const SingleProduct = () => {
     image,
     title,
     price,
-    company,
+    amount,
     productColor,
     company,
   };
