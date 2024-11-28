@@ -1,5 +1,11 @@
 import { FormInput, SubmitBtn } from '../components';
 import { Form, Link } from 'react-router-dom';
+
+export const action = (store) => async () => {
+  console.log(store);
+  return null;
+};
+
 const Login = () => {
   return (
     <section className="h-screen grid place-items-center">
@@ -7,7 +13,7 @@ const Login = () => {
         method="post"
         className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4"
       >
-        <h4 class="text-center text-3xl font-bold">Login</h4>
+        <h4 className="text-center text-3xl font-bold">Login</h4>
         <FormInput
           type="email"
           label="email"
