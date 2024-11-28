@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 
 const themes = {
   coffee: 'coffee',
@@ -12,7 +13,7 @@ const getThemeFromLocalStorage = () => {
 };
 
 const initialState = {
-  user: { userName: 'coding addict' },
+  user: { username: 'coding addict' },
   theme: getThemeFromLocalStorage(),
 };
 
@@ -24,7 +25,9 @@ const userSlice = createSlice({
       console.log('login');
     },
     logoutUser: (state) => {
-      console.log('logout');
+      state.user = null;
+      localStorage.removeItem('user');
+      toast.success('Logged out successfully');
     },
     toggleTheme: (state) => {
       const { coffee, valentine } = themes;
