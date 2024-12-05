@@ -6,7 +6,7 @@ day.extend(advancedFormat);
 const OrdersList = () => {
   const { orders, meta } = useLoaderData();
   return (
-    <div>
+    <div className="mt-8">
       <h4 className="mb-4 capitalize">
         total orders : {meta.pagination.total}
       </h4>
